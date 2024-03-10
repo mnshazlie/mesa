@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>MESA - Easy Medic Help</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="icon" type="image/x-icon" href="logoonly dark.png" />
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Madimi+One&family=Poiret+One&display=swap");
+		</style>
+	</head>
+	<body>
+		<button style="display: none" id="backButton" onclick="openMainMenu()">
+			<
+		</button>
+		<div id="homePage">
+			<div
+				id="userInputMenu"
+				class="visible"
+				style="display: flex; align-items: center; flex-direction: column"
+			>
+				<img
+					src="logoonly dark.png"
+					style="height: 150px; margin-bottom: 20px"
+				/>
+				<div class="menu">
+					<input id="TC" type="number" placeholder="TC" autocomplete="off" />
+					<p id="error"></p>
+					<button onclick="openAiMenu()" id="login">LOGIN</button>
+				</div>
+			</div>
+
+			<div class="hidden menu" id="ai">
+				<div id="aiContainer">
+					<div id="chat">
+						<div id="message1" class="message notSent">The Problem</div>
+						<div id="message2" class="message notSent">
+							80% Cold<br />15% Salmonella<br />5% Poison
+						</div>
+						<div id="message3" class="message notSent">The Problem</div>
+						<div id="message4" class="message notSent">
+							You can drink hot tea in the meanwhile, you'll most likely feel
+							better until you see the doctor. Make sure you visit a doctor as
+							soon as possible as it might be a serious condition.
+						</div>
+					</div>
+					<div id="aiChatInputContainer">
+						<input
+							id="aiInput"
+							type="text"
+							name="aiInput"
+							placeholder="Explain Your Problem"
+							autocomplete="off"
+						/>
+						<button onclick="sendProblem()" id="send">SEND</button>
+					</div>
+					<button class="hidden" onclick="showData()" id="next">NEXT</button>
+				</div>
+			</div>
+			<div class="hidden menu" id="availableHospitals">
+				<h1>Available Doctors & Hospitals</h1>
+				<div class="card hospital">
+					<div class="infoContainer">
+						<p class="bestMatching">BEST MATCHING</p>
+						<p class="hospitalName">Hospital Name</p>
+						<p class="hospitalNumber">+0000000000</p>
+						<p class="address">Address</p>
+					</div>
+					<button class="cardActions">GO TO LOCATION</button>
+				</div>
+				<div class="card doctor">
+					<div class="infoContainer">
+						<p class="bestMatching">BEST MATCHING</p>
+						<p class="doctorName">Doctor Name</p>
+						<p class="doctorNumber">+0000000000</p>
+					</div>
+					<button class="cardActions">CHAT NOW</button>
+				</div>
+				<div class="card doctor">
+					<div class="infoContainer">
+						<p class="bestMatching">BEST MATCHING</p>
+						<p class="doctorName">Doctor Name</p>
+						<p class="doctorNumber">+0000000000</p>
+					</div>
+					<button class="cardActions">CHAT NOW</button>
+				</div>
+
+				<div class="card hospital">
+					<div class="infoContainer">
+						<p class="hospitalName">Hospital Name</p>
+						<p class="hospitalNumber">+0000000000</p>
+						<p class="address">Address</p>
+					</div>
+					<button class="cardActions">GO TO LOCATION</button>
+				</div>
+				<div class="card doctor">
+					<div class="infoContainer">
+						<p class="doctorName">Doctor Name</p>
+						<p class="doctorNumber">+0000000000</p>
+					</div>
+					<button class="cardActions">CHAT NOW</button>
+				</div>
+				<div class="card doctor">
+					<div class="infoContainer">
+						<p class="doctorName">Doctor Name</p>
+						<p class="doctorNumber">+0000000000</p>
+					</div>
+					<button class="cardActions">CHAT NOW</button>
+				</div>
+				<div class="card doctor">
+					<div class="infoContainer">
+						<p class="doctorName">Doctor Name</p>
+						<p class="doctorNumber">+0000000000</p>
+					</div>
+					<button class="cardActions">CHAT NOW</button>
+				</div>
+				<div class="card doctor">
+					<div class="infoContainer">
+						<p class="doctorName">Doctor Name</p>
+						<p class="doctorNumber">+0000000000</p>
+					</div>
+					<button class="cardActions">CHAT NOW</button>
+				</div>
+			</div>
+		</div>
+		<script src="app.js"></script>
+	</body>
+</html>
